@@ -151,14 +151,19 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             const produit = this.parentElement.querySelector('h3').textContent;
             const prix = parseInt(this.parentElement.querySelector('p:nth-child(3)').textContent.split(' ')[1]);
+            let playerId = '';
+            if (produit.includes('Free Fire')) {
+                playerId = prompt('Entrez votre Player ID Free Fire :');
+                if (!playerId) return;
+            }
             if (wallet.solde >= prix) {
                 wallet.solde -= prix;
-                wallet.historique.push(`Achat de ${produit} pour ${prix} HTG`);
-                transactions.push({ user: currentUser.email, produit, prix });
+                wallet.historique.push(`Achat de ${produit} pour ${prix} HTG${playerId ? ` (Player ID: ${playerId})` : ''}`);
+                transactions.push({ user: currentUser.email, produit, prix, playerId });
                 saveData();
                 updateWalletDisplay();
                 updateHistorique();
-                alert('Achat réussi !');
+                alert(`Achat réussi !${playerId ? ' Diamants envoyés à votre Player ID.' : ''}`);
             } else {
                 alert('Solde insuffisant.');
             }
