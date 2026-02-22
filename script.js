@@ -103,9 +103,15 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             const montant = parseInt(document.getElementById('montant').value);
             const methode = document.getElementById('methode').value;
-            recharges.push({ montant, methode, status: 'En attente' });
+            const preuve = document.getElementById('preuve').files[0];
+            if (!preuve) {
+                alert('Veuillez uploader une preuve de paiement.');
+                return;
+            }
+            // Simuler l'upload : stocker le nom du fichier
+            recharges.push({ montant, methode, status: 'En attente', preuve: preuve.name });
             saveData();
-            alert('Demande de recharge envoyée !');
+            alert('Demande de recharge avec preuve envoyée !');
         });
     }
 
