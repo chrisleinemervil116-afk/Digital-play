@@ -115,6 +115,32 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Free Fire Recharge
+    const freefireForm = document.getElementById('freefire-form');
+    if (freefireForm) {
+        freefireForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            if (!currentUser) {
+                alert('Veuillez vous connecter pour acheter.');
+                return;
+            }
+            const playerId = document.getElementById('player-id').value;
+            const pack = document.getElementById('pack').value;
+            const prix = parseInt(pack.split(' - ')[1]);
+            if (wallet.solde >= prix) {
+                wallet.solde -= prix;
+                wallet.historique.push(`Achat de ${pack} pour Player ID ${playerId}`);
+                transactions.push({ user: currentUser.email, produit: `Free Fire ${pack}`, prix });
+                saveData();
+                updateWalletDisplay();
+                updateHistorique();
+                alert('Achat réussi ! Diamants envoyés à votre Player ID.');
+            } else {
+                alert('Solde insuffisant. Veuillez recharger votre wallet.');
+            }
+        });
+    }
+
     // Produits
     const buyButtons = document.querySelectorAll('.produit button');
     buyButtons.forEach(button => {
