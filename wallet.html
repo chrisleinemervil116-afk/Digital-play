@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital-Play 🎮 - Wallet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.svg" alt="Digital-Play Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="products.html">Produits</a></li>
+                <li><a href="wallet.html">Wallet</a></li>
+                <li><a href="account.html">Compte</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="wallet">
+        <h2>Votre Wallet</h2>
+        <div class="wallet-info">
+            <p>Solde actuel : <span id="solde">0 HTG</span></p>
+        </div>
+        <div class="recharge">
+            <h3>Recharger Wallet</h3>
+            <form id="recharge-form">
+                <label for="montant">Montant (HTG) :</label>
+                <input type="number" id="montant" name="montant" required>
+                <label for="methode">Méthode :</label>
+                <select id="methode" name="methode">
+                    <option value="MonCash">MonCash</option>
+                    <option value="NatCash">NatCash</option>
+                </select>
+                <button type="submit">Recharger</button>
+            </form>
+        </div>
+        <div class="historique">
+            <h3>Historique des Transactions</h3>
+            <ul id="historique-list">
+                <!-- Historique simulé -->
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Digital-Play. Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
