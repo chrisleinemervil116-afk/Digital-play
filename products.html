@@ -1,134 +1,100 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Digital-Play 🌟 | Recharge Jeux</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital-Play 🎮 - Produits</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <canvas id="particles"></canvas>
-  <header class="topbar glass">
-    <a class="brand" href="index.html"><img src="logo.svg" alt="Logo Digital-Play"></a>
-    <nav>
-      <a href="index.html">Accueil</a>
-      <a href="products.html" class="active">Produits</a>
-      <a href="wallet.html">Wallet</a>
-      <a href="account.html">Compte</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-
-  <main class="page">
-    <section class="section">
-      <h1>Recharge de Jeux</h1>
-      <div class="filters glass">
-        <select id="filter-game"><option value="all">Tous les Jeux</option><option>Free Fire</option><option>FC Mobile</option><option>eFootball</option><option>PUBG Mobile</option><option>Blood Strike</option><option>Roblox</option><option>DLS</option><option>Minecraft</option><option>Flex City</option></select>
-        <select id="filter-price"><option value="all">Prix</option><option value="low">Moins de 200 HTG</option><option value="mid">200 HTG - 500 HTG</option><option value="high">500 HTG+</option></select>
-        <select id="filter-tag"><option value="all">Type</option><option>Populaire</option><option>Nouveautés</option></select>
-      </div>
-
-      <div class="cards product-grid" id="product-grid">
-        <article class="product-card clean-card" data-game="Free Fire" data-price="157" data-tag="Populaire">
-          <div class="product-media"><img src="assets/products/free-fire.svg" alt="Free Fire"></div>
-          <div class="pill">Mobile</div><h3>Free Fire - Diamants</h3><p class="price">À partir de 157 HTG</p><a class="view-btn product-link" href="product-page.html?product=free-fire">Voir</a>
-        </article>
-        <article class="product-card clean-card" data-game="FC Mobile" data-price="95" data-tag="Populaire">
-          <div class="product-media"><img src="assets/products/fc-mobile.svg" alt="FC Mobile"></div>
-          <div class="pill">Mobile</div><h3>FC Mobile - Points</h3><p class="price">À partir de 95 Gdes</p><a class="view-btn product-link" href="product-page.html?product=fc-mobile">Voir</a>
-        </article>
-        <article class="product-card clean-card" data-game="eFootball" data-price="220" data-tag="Populaire">
-          <div class="product-media"><img src="assets/products/efootball.svg" alt="eFootball"></div>
-          <div class="pill">Mobile</div><h3>eFootball - Pièces</h3><p class="price">À partir de 220 HTG</p><a class="view-btn product-link" href="product-page.html?product=efootball">Voir</a>
-        </article>
-
-        <article class="product-card clean-card" data-game="PUBG Mobile" data-price="180" data-tag="Populaire">
-          <div class="product-media"><img src="assets/products/pubg-mobile.svg" alt="PUBG Mobile"></div>
-          <div class="pill">Mobile</div><h3>PUBG Mobile - UC</h3><p class="price">À partir de 180 HTG</p><a class="view-btn product-link" href="product-page.html?product=pubg-mobile">Voir</a>
-        </article>
-        <article class="product-card clean-card" data-game="Blood Strike" data-price="157" data-tag="Nouveautés">
-          <div class="product-media"><img src="assets/products/blood-strike.svg" alt="Blood Strike"></div>
-          <div class="pill">Mobile</div><h3>Blood Strike - GOLD</h3><p class="price">À partir de 157 HTG</p><a class="view-btn product-link" href="product-page.html?product=blood-strike">Voir</a>
-        </article>
-        <article class="product-card clean-card" data-game="Roblox" data-price="750" data-tag="Populaire">
-          <div class="product-media"><img src="assets/products/roblox.svg" alt="Roblox"></div>
-          <div class="pill">Mobile</div><h3>Roblox - Robux</h3><p class="price">À partir de 750 HTG</p><a class="view-btn product-link" href="product-page.html?product=roblox">Voir</a>
-        </article>
-
-        <article class="product-card clean-card" data-game="DLS" data-price="400" data-tag="Populaire">
-          <div class="product-media"><img src="assets/products/dls.svg" alt="DLS"></div>
-          <div class="pill">Mobile</div><h3>DLS 26 - Coins & Gems</h3><p class="price">À partir de 400 HTG</p><a class="view-btn product-link" href="product-page.html?product=dls">Voir</a>
-        </article>
-        <article class="product-card clean-card" data-game="Minecraft" data-price="316" data-tag="Nouveautés">
-          <div class="product-media"><img src="assets/products/minecraft.svg" alt="Minecraft"></div>
-          <div class="pill">Mobile</div><h3>Minecraft - Minecoins</h3><p class="price">À partir de 316 HTG</p><a class="view-btn product-link" href="product-page.html?product=minecraft">Voir</a>
-        </article>
-        <article class="product-card clean-card" data-game="Flex City" data-price="195" data-tag="Nouveautés">
-          <div class="product-media"><img src="assets/products/flex-city.svg" alt="Flex City"></div>
-          <div class="pill">Mobile</div><h3>Flex City</h3><p class="price">À partir de 195 HTG</p><a class="view-btn product-link" href="product-page.html?product=flex-city">Voir</a>
-        </article>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="glass ff-diamonds">
-        <h2>Free Fire Diamonds 💎</h2>
-        <p>Achetez vos Diamants Free Fire rapidement et en toute sécurité sur Digital-Play.</p>
-        <div class="cards three-col ff-benefits">
-          <div class="mini-card">⚡ Livraison rapide</div>
-          <div class="mini-card">🔒 Paiement sécurisé</div>
-          <div class="mini-card">🎮 Service disponible 24/7</div>
+    <header>
+        <div class="logo">
+            <img src="logo.svg" alt="Digital-Play Logo">
         </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="products.html">Produits</a></li>
+                <li><a href="wallet.html">Wallet</a></li>
+                <li><a href="account.html">Compte</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <h3>Choisissez une offre</h3>
-        <form id="ff-order-form" class="wallet-form-grid">
-          <select id="ff-offer" required>
-            <option value="">Sélectionnez une offre</option>
-            <option value="160">100 + 10 Diamonds — 160 HTG</option>
-            <option value="330">210 + 10 Diamonds — 330 HTG</option>
-            <option value="490">310 + 31 Diamonds — 490 HTG</option>
-            <option value="550">420 + 21 Diamonds — 550 HTG</option>
-            <option value="1600">1060 + 106 Diamonds — 1600 HTG</option>
-          </select>
-
-          <h3>Informations du joueur</h3>
-          <p>Veuillez remplir correctement les informations suivantes :</p>
-          <input id="ff-player-id" type="text" placeholder="Player ID" required>
-          <input id="ff-account-name" type="text" placeholder="Nom du compte" required>
-          <small>Ces informations sont nécessaires pour envoyer les diamants au bon compte.</small>
-
-          <h3>Paiement</h3>
-          <p id="ff-selected-price" class="price">Prix sélectionné : 0 HTG</p>
-          <div class="payment-list">
-            <div class="payment-item">• Wallet Digital-Play</div>
-            <div class="payment-item">• MonCash</div>
-            <div class="payment-item">• NatCash</div>
-          </div>
-
-          <button type="submit" class="btn btn-primary">Acheter maintenant</button>
-        </form>
-
-        <h3>Confirmation</h3>
-        <ul class="steps">
-          <li>✔ La commande est enregistrée</li>
-          <li>✔ Vérification rapide</li>
-          <li>✔ Livraison des diamants</li>
-        </ul>
-      </div>
+    <section id="produits">
+        <h2>Produits Disponibles</h2>
+        <div class="produits-grid">
+            <div class="produit">
+                <img src="https://via.placeholder.com/400x300/000000/00FFFF?text=Free+Fire+100+💎" alt="Free Fire 100 Diamonds">
+                <h3>Free Fire 100 + 10 💎</h3>
+                <p>Description : 100 Diamonds + 10 Bonus pour Free Fire.</p>
+                <p>Prix : 157 HTG</p>
+                <button>Acheter</button>
+            </div>
+            <div class="produit">
+                <img src="https://via.placeholder.com/400x300/000000/8A2BE2?text=Free+Fire+310+💎" alt="Free Fire 310 Diamonds">
+                <h3>Free Fire 310 + 31 💎</h3>
+                <p>Description : 310 Diamonds + 31 Bonus pour Free Fire.</p>
+                <p>Prix : 480 HTG</p>
+                <button>Acheter</button>
+            </div>
+            <div class="produit">
+                <img src="https://via.placeholder.com/400x300/000000/00FFFF?text=Free+Fire+520+💎" alt="Free Fire 520 Diamonds">
+                <h3>Free Fire 520 + 52 💎</h3>
+                <p>Description : 520 Diamonds + 52 Bonus pour Free Fire.</p>
+                <p>Prix : 800 HTG</p>
+                <button>Acheter</button>
+            </div>
+            <div class="produit">
+                <img src="https://via.placeholder.com/400x300/000000/8A2BE2?text=Free+Fire+1060+💎" alt="Free Fire 1060 Diamonds">
+                <h3>Free Fire 1060 + 106 💎</h3>
+                <p>Description : 1060 Diamonds + 106 Bonus pour Free Fire.</p>
+                <p>Prix : 1650 HTG</p>
+                <button>Acheter</button>
+            </div>
+            <div class="produit">
+                <img src="https://via.placeholder.com/400x300/000000/00FFFF?text=Free+Fire+2180+💎" alt="Free Fire 2180 Diamonds">
+                <h3>Free Fire 2180 + 218 💎</h3>
+                <p>Description : 2180 Diamonds + 218 Bonus pour Free Fire.</p>
+                <p>Prix : 3500 HTG</p>
+                <button>Acheter</button>
+            </div>
+            <div class="produit">
+                <img src="https://via.placeholder.com/400x300/000000/8A2BE2?text=Free+Fire+5600+💎" alt="Free Fire 5600 Diamonds">
+                <h3>Free Fire 5600 + 560 💎</h3>
+                <p>Description : 5600 Diamonds + 560 Bonus pour Free Fire.</p>
+                <p>Prix : 8700 HTG</p>
+                <button>Acheter</button>
+            </div>
+            <div class="produit">
+                <img src="https://via.placeholder.com/400x300/000000/00FFFF?text=DLS+26+Coins" alt="DLS 26 Coins">
+                <h3>DLS 26 Coins</h3>
+                <p>Description : Coins pour Dream League Soccer 2026.</p>
+                <p>Prix : 300 HTG</p>
+                <button>Acheter</button>
+            </div>
+            <div class="produit">
+                <img src="https://via.placeholder.com/400x300/000000/8A2BE2?text=DLS+26+Packs" alt="DLS 26 Packs">
+                <h3>DLS 26 Packs</h3>
+                <p>Description : Packs pour Dream League Soccer 2026.</p>
+                <p>Prix : 800 HTG</p>
+                <button>Acheter</button>
+            </div>
+            <div class="produit">
+                <img src="https://via.placeholder.com/400x300/000000/00FFFF?text=eFootball+Coins" alt="eFootball Coins">
+                <h3>eFootball Coins</h3>
+                <p>Description : Coins pour eFootball.</p>
+                <p>Prix : 400 HTG</p>
+                <button>Acheter</button>
+            </div>
+        </div>
     </section>
 
-  </main>
+    <footer>
+        <p>&copy; 2026 Digital-Play. Tous droits réservés.</p>
+    </footer>
 
-  <footer>
-    <div><h4>Digital-Play 🌟</h4><p>Plateforme de services digitaux et recharges gaming.</p></div>
-    <div><a href="index.html">Accueil</a><a href="products.html">Produits</a><a href="wallet.html">Wallet</a><a href="contact.html">Contact</a></div>
-    <div><a href="#">Facebook</a><a href="#">Instagram</a><a href="#">Discord</a></div>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
