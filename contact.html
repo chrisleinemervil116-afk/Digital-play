@@ -1,51 +1,45 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Digital-Play 🌟 | Contact</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital-Play 🎮 - Contact</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <canvas id="particles"></canvas>
-  <header class="topbar glass">
-    <a class="brand" href="index.html"><img src="logo.svg" alt="Logo Digital-Play"></a>
-    <nav>
-      <a href="index.html">Accueil</a>
-      <a href="products.html">Produits</a>
-      <a href="wallet.html">Wallet</a>
-      <a href="account.html">Compte</a>
-      <a href="contact.html" class="active">Contact</a>
-    </nav>
-  </header>
+    <header>
+        <div class="logo">
+            <img src="logo.svg" alt="Digital-Play Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="products.html">Produits</a></li>
+                <li><a href="wallet.html">Wallet</a></li>
+                <li><a href="account.html">Compte</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main class="page">
-    <section class="section">
-      <h1>Support client rapide</h1>
-      <p>Notre équipe répond rapidement pour vous aider.</p>
-      <div class="cards three-col">
-        <div class="mini-card">WhatsApp: +509 3418 6164</div>
-        <div class="mini-card">Email: support@digital-play.gg</div>
-        <div class="mini-card">Discord: DigitalPlay Community</div>
-      </div>
-      <form id="contact-form" class="glass contact-form">
-        <input type="text" placeholder="Nom" required>
-        <input type="email" placeholder="Email" required>
-        <textarea placeholder="Votre message" required></textarea>
-        <button type="submit" class="btn btn-primary">Envoyer</button>
-      </form>
+    <section id="contact">
+        <h2>Contactez-nous</h2>
+        <p>WhatsApp / Téléphone : +509 3418 6164</p>
+        <form id="contact-form">
+            <label for="contact-nom">Nom :</label>
+            <input type="text" id="contact-nom" name="nom" required>
+            <label for="contact-email">Email :</label>
+            <input type="email" id="contact-email" name="email" required>
+            <label for="contact-message">Message :</label>
+            <textarea id="contact-message" name="message" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
     </section>
-  </main>
 
-  <footer>
-    <div><h4>Digital-Play 🌟</h4><p>Plateforme de services digitaux et recharges gaming.</p></div>
-    <div><a href="index.html">Accueil</a><a href="products.html">Produits</a><a href="wallet.html">Wallet</a><a href="contact.html">Contact</a></div>
-    <div><a href="#">Facebook</a><a href="#">Instagram</a><a href="#">Discord</a></div>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2026 Digital-Play. Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
