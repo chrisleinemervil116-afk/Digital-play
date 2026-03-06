@@ -1,88 +1,107 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital-Play 🎮 - Wallet</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital-Play 🌟 | Wallet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="logo.svg" alt="Digital-Play Logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="products.html">Produits</a></li>
-                <li><a href="wallet.html">Wallet</a></li>
-                <li><a href="account.html">Compte</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <canvas id="particles"></canvas>
+  <header class="topbar glass">
+    <a class="brand" href="index.html"><img src="logo.svg" alt="Logo Digital-Play"></a>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="products.html">Produits</a>
+      <a href="wallet.html" class="active">Wallet</a>
+      <a href="account.html">Compte</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-    <section id="wallet">
-        <h2>Votre Wallet</h2>
-        <div class="wallet-info">
-            <p>Solde actuel : <span id="solde">0 HTG</span></p>
+  <main class="page">
+    <section class="section split">
+      <div class="glass wallet-panel">
+        <h1>Wallet Digital</h1>
+        <p>Solde actuel</p>
+        <h2 id="wallet-balance">0 HTG</h2>
+        <div class="cta-row">
+          <button class="btn btn-primary" id="btn-recharge" type="button">Recharger</button>
+          <button class="btn btn-secondary" id="btn-withdraw" type="button">Retirer</button>
         </div>
-        <div class="recharge">
-            <h3>Recharger Wallet</h3>
-            <form id="recharge-form">
-                <label for="montant">Montant (HTG) :</label>
-                <input type="number" id="montant" name="montant" required>
-                <label for="methode">Méthode :</label>
-                <select id="methode" name="methode">
-                    <option value="MonCash">MonCash</option>
-                    <option value="NatCash">NatCash</option>
-                </select>
-                <label for="preuve">Preuve de paiement (image) :</label>
-                <input type="file" id="preuve" name="preuve" accept="image/*" required>
-                <button type="submit">Recharger</button>
-            </form>
-            <p><strong>Instructions :</strong></p>
-            <ul>
-                <li>Pour MonCash : Envoyez le montant au numéro <strong>+509 34186164</strong>.</li>
-                <li>Pour NatCash : Envoyez le montant au numéro <strong>+509 42219380</strong>.</li>
-            </ul>
-            <p>Après le paiement, votre demande sera en attente de validation par l'admin.</p>
+      </div>
+
+      <div class="glass wallet-panel">
+        <h3>Méthodes de paiement</h3>
+        <div class="payment-list">
+          <div class="payment-item">
+            <h4>NatCash</h4>
+            <p><strong>Numéro :</strong> 42219380</p>
+            <p><strong>Nom :</strong> Mervil Celicien</p>
+          </div>
+          <div class="payment-item">
+            <h4>MonCash</h4>
+            <p><strong>Numéro :</strong> 34186164</p>
+            <p><strong>Nom :</strong> Juvens Mervil</p>
+          </div>
         </div>
-        <div class="historique">
-            <h3>Historique des Transactions</h3>
-            <ul id="historique-list">
-                <!-- Historique simulé -->
-            </ul>
-        </div>
+        <p class="help-text">Après le paiement, remplissez le formulaire ci-dessous pour confirmer votre recharge.</p>
+      </div>
     </section>
 
-    <section id="freefire-recharge">
-        <h2>Recharge Free Fire Diamonds Instantanément</h2>
-        <p>Achetez des diamants Free Fire rapidement et en toute sécurité.</p>
-        <p>Entrez votre Player ID, choisissez votre pack et recevez vos diamants en quelques minutes.</p>
-        <ul>
-            <li>✔ Livraison rapide</li>
-            <li>✔ Paiement sécurisé (MonCash / NatCash / Wallet)</li>
-            <li>✔ Aucun mot de passe requis</li>
-        </ul>
-        <p>Les diamants permettent d'acheter des skins, personnages, armes et objets exclusifs dans le jeu.</p>
-        <form id="freefire-form">
-            <label for="player-id">Player ID :</label>
-            <input type="text" id="player-id" name="player-id" required>
-            <label for="pack">Pack :</label>
-            <select id="pack" name="pack">
-                <option value="100">100 Diamonds - 50 HTG</option>
-                <option value="500">500 Diamonds - 250 HTG</option>
-                <option value="1000">1000 Diamonds - 500 HTG</option>
-            </select>
-            <button type="submit">Acheter</button>
+    <section class="section">
+      <div class="glass wallet-panel">
+        <h2>Formulaire de Recharge</h2>
+        <form id="wallet-form" class="wallet-form-grid">
+          <input id="fullname" type="text" placeholder="Nom complet" required>
+          <input id="username-email" type="text" placeholder="Email ou Nom d'utilisateur" required>
+          <input id="amount" type="number" min="1" placeholder="Montant envoyé (HTG)" required>
+
+          <select id="method" required>
+            <option value="">Méthode de paiement</option>
+            <option value="MonCash">MonCash</option>
+            <option value="NatCash">NatCash</option>
+          </select>
+
+          <input id="paid-number" type="text" placeholder="Numéro utilisé pour le paiement" required>
+          <input id="payment-date" type="datetime-local" required>
+
+          <div class="file-wrap">
+            <label for="proof">Preuve de paiement (obligatoire)</label>
+            <input id="proof" type="file" accept=".jpg,.jpeg,.png,.pdf" required>
+            <small>Téléchargez une capture d’écran ou photo de la transaction. Formats acceptés : JPG, PNG, PDF</small>
+          </div>
+
+          <button class="btn btn-primary" type="submit">Soumettre la demande</button>
         </form>
+      </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 Digital-Play. Tous droits réservés.</p>
-    </footer>
+    <section class="section split">
+      <div class="glass wallet-panel">
+        <h3>Important</h3>
+        <ul class="steps">
+          <li>• Vérifiez que le numéro et le nom sont corrects avant d’envoyer l’argent.</li>
+          <li>• La photo de paiement est obligatoire pour valider la recharge.</li>
+          <li>• Les recharges sont généralement confirmées en quelques minutes.</li>
+        </ul>
+      </div>
+      <div class="glass wallet-panel">
+        <h3>Historique transactions</h3>
+        <ul class="history" id="wallet-history"></ul>
+      </div>
+    </section>
+  </main>
 
-    <script src="script.js"></script>
+  <footer>
+    <div><h4>Digital-Play 🌟</h4><p>Plateforme de services digitaux et recharges gaming.</p></div>
+    <div><a href="index.html">Accueil</a><a href="products.html">Produits</a><a href="wallet.html">Wallet</a><a href="contact.html">Contact</a></div>
+    <div><a href="#">Facebook</a><a href="#">Instagram</a><a href="#">Discord</a></div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js"></script>
 </body>
 </html>
