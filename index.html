@@ -1,73 +1,88 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital-Play 🎮 - Accueil</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital-Play 🌟 | Accueil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="logo.svg" alt="Digital-Play Logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="products.html">Produits</a></li>
-                <li><a href="wallet.html">Wallet</a></li>
-                <li><a href="account.html">Compte</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <canvas id="particles"></canvas>
+  <div class="loader" id="loader"><div class="spinner"></div><p>Chargement de l'arène Digital-Play...</p></div>
 
-    <section id="banniere">
-        <div class="banniere-content">
-            <h1>Bienvenue sur Digital-Play 🎮</h1>
-            <p>La meilleure plateforme pour acheter vos produits gaming rapidement en Haïti.</p>
-            <div class="boutons">
-                <button class="btn-primary">Acheter maintenant</button>
-                <button class="btn-secondary">Créer un compte</button>
-            </div>
+  <header class="topbar glass">
+    <a class="brand" href="index.html"><img src="logo.svg" alt="Logo Digital-Play"></a>
+    <nav>
+      <a href="index.html" class="active">Accueil</a>
+      <a href="products.html">Produits</a>
+      <a href="wallet.html">Wallet</a>
+      <a href="account.html">Compte</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content glass">
+        <p class="badge">Plateforme Premium de Top-up Gaming</p>
+        <h1>Bienvenue sur Digital-Play</h1>
+        <p>La plateforme ultime pour vos recharges gaming et services digitaux.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="products.html">Acheter maintenant</a>
+          <a class="btn btn-secondary" href="products.html">Explorer les jeux</a>
         </div>
-        <img src="https://via.placeholder.com/1920x600/000000/00FFFF?text=Gaming+Background" alt="Bannière Gaming" class="banniere-img">
+      </div>
     </section>
 
-    <section id="produits-principaux">
-        <h2>Produits Principaux</h2>
-        <div class="produits-grid">
-            <div class="produit">
-                <img src="https://via.placeholder.com/300x200/000000/00FFFF?text=Free+Fire" alt="Free Fire">
-                <h3>Free Fire</h3>
-                <p>Diamonds et packs populaires</p>
-                <button>Acheter</button>
-            </div>
-            <div class="produit">
-                <img src="https://via.placeholder.com/300x200/000000/8A2BE2?text=Dream+League+Soccer+2026" alt="Dream League Soccer 2026">
-                <h3>Dream League Soccer 2026</h3>
-                <p>Coins et packs</p>
-                <button>Acheter</button>
-            </div>
-            <div class="produit">
-                <img src="https://via.placeholder.com/300x200/000000/00FFFF?text=eFootball" alt="eFootball">
-                <h3>eFootball</h3>
-                <p>Coins et abonnements</p>
-                <button>Acheter</button>
-            </div>
-            <div class="produit">
-                <img src="https://via.placeholder.com/300x200/000000/8A2BE2?text=Abonnements" alt="Abonnements">
-                <h3>Abonnements</h3>
-                <p>Abonnements gaming</p>
-                <button>Acheter</button>
-            </div>
-        </div>
+    <section class="section">
+      <h2>Jeux populaires</h2>
+      <div class="cards five-col">
+        <article class="game-card"><h3>Free Fire</h3></article>
+        <article class="game-card"><h3>eFootball</h3></article>
+        <article class="game-card"><h3>DLS</h3></article>
+        <article class="game-card"><h3>Netflix</h3></article>
+        <article class="game-card"><h3>Cartes cadeaux</h3></article>
+      </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 Digital-Play. Tous droits réservés.</p>
-    </footer>
+    <section class="section">
+      <h2>Pourquoi Digital-Play ?</h2>
+      <div class="cards four-col">
+        <div class="mini-card">⚡ Livraison instantanée</div>
+        <div class="mini-card">🔒 Paiement sécurisé</div>
+        <div class="mini-card">🌍 Disponible 24/7</div>
+        <div class="mini-card">💎 Prix compétitifs</div>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
+    <section class="section stats-wrap">
+      <div class="stat glass"><span class="counter" data-target="10000">0</span><p>clients satisfaits</p></div>
+      <div class="stat glass"><span class="counter" data-target="50000">0</span><p>commandes livrées</p></div>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <h4>Digital-Play 🌟</h4>
+      <p>Plateforme de services digitaux et recharges gaming.</p>
+    </div>
+    <div>
+      <a href="index.html">Accueil</a>
+      <a href="products.html">Produits</a>
+      <a href="wallet.html">Wallet</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div>
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">Discord</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js"></script>
 </body>
 </html>
