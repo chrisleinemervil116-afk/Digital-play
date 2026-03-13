@@ -1,74 +1,69 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital-Play 🎮 - Compte</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital-Play 🌟 | Compte</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="logo.svg" alt="Digital-Play Logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="products.html">Produits</a></li>
-                <li><a href="wallet.html">Wallet</a></li>
-                <li><a href="account.html">Compte</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <canvas id="particles"></canvas>
+  <header class="topbar glass">
+    <a class="brand" href="index.html"><img src="logo.svg" alt="Logo Digital-Play"></a>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="products.html">Produits</a>
+      <a href="wallet.html">Wallet</a>
+      <a href="account.html" class="active">Compte</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="top-wallet glass" id="top-wallet">Wallet: 0 HTG</div>
+  </header>
 
-    <section id="auth">
-        <div id="login-form">
-            <h2>Connexion</h2>
-            <form id="login">
-                <label for="login-email">Email ou Téléphone :</label>
-                <input type="text" id="login-email" name="email" required>
-                <label for="login-password">Mot de passe :</label>
-                <input type="password" id="login-password" name="password" required>
-                <button type="submit">Se connecter</button>
-            </form>
-            <p><a href="#" id="show-register">Créer un compte</a></p>
-        </div>
-        <div id="register-form" style="display: none;">
-            <h2>Inscription</h2>
-            <form id="register">
-                <label for="reg-nom">Nom :</label>
-                <input type="text" id="reg-nom" name="nom" required>
-                <label for="reg-email">Email ou Téléphone :</label>
-                <input type="text" id="reg-email" name="email" required>
-                <label for="reg-password">Mot de passe :</label>
-                <input type="password" id="reg-password" name="password" required>
-                <button type="submit">S'inscrire</button>
-            </form>
-            <p><a href="#" id="show-login">Se connecter</a></p>
-        </div>
+  <main class="page">
+    <section class="section split">
+      <div class="glass auth-card">
+        <h2>Créer un compte</h2>
+        <form id="register-form">
+          <input id="reg-name" type="text" placeholder="Nom complet" required>
+          <input id="reg-email" type="email" placeholder="Email" required>
+          <input id="reg-password" type="password" placeholder="Mot de passe" required>
+          <button class="btn btn-primary" type="submit">Inscription</button>
+        </form>
+      </div>
+      <div class="glass auth-card">
+        <h2>Se connecter</h2>
+        <form id="login-form">
+          <input id="login-email" type="email" placeholder="Email" required>
+          <input id="login-password" type="password" placeholder="Mot de passe" required>
+          <button class="btn btn-secondary" type="submit">Connexion</button>
+        </form>
+        <p class="oauth">Connexion possible avec <strong>Email</strong> et <strong>Google</strong>.</p>
+        <p class="help-text">Admin: connectez-vous avec <strong>juvensmervil592@gmail.com</strong> pour accéder au dashboard.</p>
+      </div>
     </section>
 
-    <section id="dashboard" style="display: none;">
-        <h2>Dashboard Utilisateur</h2>
-        <p>Solde Wallet : <span id="user-solde">0 HTG</span></p>
-        <h3>Acheter Produit</h3>
-        <p>Redirection vers <a href="products.html">Produits</a></p>
-        <h3>Historique Commandes</h3>
-        <ul id="commandes-list">
-            <!-- Historique simulé -->
-        </ul>
-        <h3>Historique Recharge</h3>
-        <ul id="recharge-list">
-            <!-- Historique simulé -->
-        </ul>
-        <button id="logout">Déconnexion</button>
+    <section class="section">
+      <h2>Dashboard utilisateur</h2>
+      <div class="cards four-col">
+        <div class="mini-card">Voir solde wallet</div>
+        <div class="mini-card">Historique commandes</div>
+        <div class="mini-card">Acheter produits</div>
+        <div class="mini-card">Modifier profil</div>
+      </div>
+      <div class="glass support-row">Support client premium 24/7 disponible.</div>
     </section>
+  </main>
 
-    <footer>
-        <p>&copy; 2026 Digital-Play. Tous droits réservés.</p>
-    </footer>
-
-    <script src="script.js"></script>
+  <footer>
+    <div><h4>Digital-Play 🌟</h4><p>Plateforme de services digitaux et recharges gaming.</p></div>
+    <div><a href="index.html">Accueil</a><a href="products.html">Produits</a><a href="wallet.html">Wallet</a><a href="contact.html">Contact</a></div>
+    <div><a href="#">Facebook</a><a href="#">Instagram</a><a href="#">Discord</a></div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js"></script>
 </body>
 </html>

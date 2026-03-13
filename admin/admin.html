@@ -1,65 +1,66 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital-Play 🎮 - Admin Dashboard</title>
-    <link rel="stylesheet" href="../style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital-Play 🌟 | Admin Panel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="../logo.svg" alt="Digital-Play Logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Retour au Site</a></li>
-            </ul>
-        </nav>
-    </header>
+  <canvas id="particles"></canvas>
+  <header class="topbar glass">
+    <a class="brand" href="../index.html"><img src="../logo.svg" alt="Logo Digital-Play"></a>
+    <nav><a href="../index.html">Retour au site</a></nav>
+    <div class="top-wallet glass" id="top-wallet">Wallet: 0 HTG</div>
+  </header>
 
-    <section id="admin-dashboard">
-        <h2>Dashboard Admin</h2>
-        <div class="admin-section">
-            <h3>Utilisateurs</h3>
-            <ul id="users-list">
-                <!-- Liste simulée -->
-            </ul>
-        </div>
-        <div class="admin-section">
-            <h3>Transactions</h3>
-            <ul id="transactions-list">
-                <!-- Liste simulée -->
-            </ul>
-        </div>
-        <div class="admin-section">
-            <h3>Demandes de Recharge</h3>
-            <ul id="recharges-list">
-                <!-- Liste simulée -->
-                <li>Demande 1 : 500 HTG - <button>Valider</button> <button>Refuser</button></li>
-            </ul>
-        </div>
-        <div class="admin-section">
-            <h3>Gérer Produits</h3>
-            <form id="add-product">
-                <label for="product-name">Nom :</label>
-                <input type="text" id="product-name" name="name" required>
-                <label for="product-price">Prix (HTG) :</label>
-                <input type="number" id="product-price" name="price" required>
-                <button type="submit">Ajouter Produit</button>
-            </form>
-        </div>
-        <div class="admin-section">
-            <h3>Statistiques</h3>
-            <p>Total Utilisateurs : <span id="total-users">0</span></p>
-            <p>Total Transactions : <span id="total-transactions">0</span></p>
-        </div>
+  <main class="page">
+    <section class="section">
+      <h1>Admin Panel SaaS</h1>
+      <div class="cards four-col">
+        <div class="mini-card"><strong id="stat-products">5</strong><br>Produits</div>
+        <div class="mini-card"><strong id="stat-orders">0</strong><br>Commandes</div>
+        <div class="mini-card"><strong id="stat-users">0</strong><br>Utilisateurs</div>
+        <div class="mini-card"><strong id="stat-payments">0</strong><br>Paiements</div>
+      </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 Digital-Play. Tous droits réservés.</p>
-    </footer>
+    <section class="section split">
+      <div class="glass auth-card">
+        <h3>Ajouter produits / Modifier prix</h3>
+        <form id="admin-product-form">
+          <input id="admin-product-name" placeholder="Nom du produit" required>
+          <input id="admin-product-price" type="number" placeholder="Prix" required>
+          <button class="btn btn-primary" type="submit">Ajouter</button>
+        </form>
+      </div>
+      <div class="glass auth-card">
+        <h3>Gestion commandes</h3>
+        <ul class="history" id="admin-orders"></ul>
+      </div>
+    </section>
 
-    <script src="../script.js"></script>
+    <section class="section split">
+      <div class="glass auth-card">
+        <h3>Demandes de recharge</h3>
+        <ul class="history" id="admin-recharges"></ul>
+      </div>
+      <div>
+        <h3>Liste des utilisateurs</h3>
+        <ul class="history glass" id="admin-users"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div><h4>Digital-Play 🌟</h4><p>Plateforme de services digitaux et recharges gaming.</p></div>
+    <div><a href="../index.html">Accueil</a><a href="../products.html">Produits</a><a href="../wallet.html">Wallet</a><a href="../contact.html">Contact</a></div>
+    <div><a href="#">Facebook</a><a href="#">Instagram</a><a href="#">Discord</a></div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../script.js"></script>
 </body>
 </html>

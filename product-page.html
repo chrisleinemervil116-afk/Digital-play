@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital-Play 🌟 | Détail produit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="particles"></canvas>
+  <header class="topbar glass">
+    <a class="brand" href="index.html"><img src="logo.svg" alt="Logo Digital-Play"></a>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="products.html" class="active">Produits</a>
+      <a href="wallet.html">Wallet</a>
+      <a href="account.html">Compte</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="top-wallet glass" id="top-wallet">Wallet: 0 HTG</div>
+  </header>
+
+  <main class="page">
+    <section class="section">
+      <a class="view-btn product-link" href="products.html">← Retour aux produits</a>
+      <div class="glass detail-wrap">
+        <div class="detail-media"><img id="detail-image" src="" alt="Produit"></div>
+        <div>
+          <h1 id="detail-title">Produit</h1>
+          <p id="detail-description"></p>
+          <p id="detail-price" class="price"></p>
+          <div id="detail-offers-wrap" class="detail-offers-wrap" style="display:none;">
+            <h3>Prix Diamond</h3>
+            <ul id="detail-offers" class="steps"></ul>
+          </div>
+          <div id="ff-required-info" class="ff-required-info" style="display:none;">
+            <h3>Informations importantes (obligatoire)</h3>
+            <p>Player ID et Nom du compte sont obligatoires pour traiter la commande Free Fire.</p>
+            <div class="wallet-form-grid">
+              <input id="detail-player-id" type="text" placeholder="Player ID" required>
+              <input id="detail-account-name" type="text" placeholder="Nom du compte" required>
+            </div>
+            <button id="copy-required-info" type="button" class="view-btn">Copier</button>
+          </div>
+          <div id="account-required-info" class="ff-required-info" style="display:none;">
+            <h3>Informations du compte</h3>
+            <p>Veuillez remplir les informations du compte pour finaliser la commande.</p>
+            <div class="wallet-form-grid">
+              <input id="detail-account-email" type="email" placeholder="Email du compte" required>
+              <input id="detail-account-password" type="text" placeholder="Mot de passe" required>
+              <input id="detail-account-whatsapp" type="text" placeholder="Numéro WhatsApp" required>
+            </div>
+          </div>
+          <div id="pubg-required-info" class="ff-required-info" style="display:none;">
+            <h3>Informations importantes obligatoire</h3>
+            <p>Veuillez entrer l'E-mail du compte pour valider la recharge PUBG Mobile.</p>
+            <div class="wallet-form-grid">
+              <input id="detail-pubg-email" type="email" placeholder="E-mail du compte" required>
+            </div>
+          </div>
+          <div class="payment-list">
+            <div class="payment-item">Paiement via Wallet Digital-Play</div>
+            <div class="payment-item">Paiement via MonCash</div>
+            <div class="payment-item">Paiement via NatCash</div>
+          </div>
+          <button id="detail-buy" class="btn btn-primary" type="button">Acheter maintenant</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div><h4>Digital-Play 🌟</h4><p>Plateforme de services digitaux et recharges gaming.</p></div>
+    <div><a href="index.html">Accueil</a><a href="products.html">Produits</a><a href="wallet.html">Wallet</a><a href="contact.html">Contact</a></div>
+    <div><a href="#">Facebook</a><a href="#">Instagram</a><a href="#">Discord</a></div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js"></script>
+</body>
+</html>
