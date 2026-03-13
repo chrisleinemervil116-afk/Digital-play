@@ -1,11 +1,29 @@
-<svg width="300" height="100" xmlns="http://www.w3.org/2000/svg">
+<svg width="520" height="120" viewBox="0 0 520 120" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#000000;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#00FFFF;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#8A2BE2;stop-opacity:1" />
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#22D3EE"/>
+      <stop offset="50%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#FACC15"/>
     </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#22D3EE"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
-  <text x="10" y="60" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="url(#grad1)">Digital-Play</text>
-  <text x="250" y="60" font-family="Arial, sans-serif" font-size="36" fill="url(#grad1)">🎮</text>
+
+  <g filter="url(#glow)">
+    <path d="M28 60C28 43 41 30 58 30H110C127 30 140 43 140 60C140 77 127 90 110 90H58C41 90 28 77 28 60Z" fill="#0B1022" stroke="url(#g1)" stroke-width="4"/>
+    <path d="M64 43L103 60L64 77V43Z" fill="url(#g1)"/>
+    <path d="M46 24L52 36L65 38L55 47L57 60L46 54L35 60L37 47L27 38L40 36L46 24Z" fill="#FACC15"/>
+  </g>
+
+  <text x="160" y="78" font-family="Orbitron, Arial, sans-serif" font-size="54" font-weight="800" fill="url(#g2)">Digital-</text>
+  <text x="381" y="78" font-family="Orbitron, Arial, sans-serif" font-size="54" font-weight="800" fill="#FACC15">Play</text>
 </svg>
